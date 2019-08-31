@@ -1,21 +1,11 @@
-.page-footer{
-  background-color: $primary;
-  color: white
+@import '../index.scss';
+
+ul#connect-links{
+  padding-left: 0;
 }
 
 ul#connect-links li {
   display:inline;
-}
-a{
-  color: #50eafd !important;
-}
-li a{
-  color: white !important;
-}
-
-li a:hover{
-  color: #68d5ff !important;
-}
-p a:hover{
-  color: #68d5ff !important;
+  font-size: 20px;
+  padding: .5rem;
 }
