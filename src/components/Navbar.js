@@ -50,19 +50,12 @@ class Navbar extends React.Component {
                                     <input value={searchQuery} className="browser-default" type="text" name="search"
                                            placeholder="Enter to search" onChange={this.updateSearch}/>
                                 </li>
-                                <li>
-                                    <a href="/search" title="Search">
-                                            <FontAwesomeIcon icon={faSearch}/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <Link to="blog">
-                                        Blog
-                                    </Link>
+                                <li><Link to="search"><FontAwesomeIcon icon={faSearch}/></Link></li>
+                                <li><Link to="blog">Blog</Link>
                                 </li>
                                 <li><a href="/forum" title="Forums">Forum</a></li>
                                 <li><a href="/essay" title="Essays">Essays</a></li>
-                                <li><a className="atila-blue" href="/team">Team</a></li>
+                                <li><Link to="team">Team</Link></li>
                             </span>
                 </ul>
             </nav>
