@@ -4,10 +4,11 @@ node_js:
 cache:
   directories:
   - node_modules
+  - build #mostly just to trigger circleci
 script:
   - npm test
   - CI=false ; npm run build
-
+  - npm run deploy -- --repo "https://$github_token@github.com"
 deploy:
   provider: pages
   skip_cleanup: true
