@@ -15,6 +15,5 @@ deploy:
   bucket: "demo.atila.ca"
   skip_cleanup: true
   local_dir: build
-branches:
-  only:
-  - /.*/
+  on:
+    all_branches: true
