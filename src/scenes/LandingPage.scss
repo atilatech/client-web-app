@@ -1,33 +1,25 @@
-.LandingPage {
+@import '../index.scss';
+
+.background-image {
+  //background: linear-gradient(to left, #00c6ff, #30a0ff);
+  background: linear-gradient(to left, #1976d2, #194f87);
+
+}
+
+.preview-form {
+  background: transparent;
+  padding: 1px 0 0 0;
+  //margin-top: -37%;
+}
+
+.form-header {
   text-align: center;
-}
-
-.LandingPage-logo {
-  animation: LandingPage-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.LandingPage-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 55px;
   color: white;
 }
-
-.LandingPage-link {
-  color: #61dafb;
-}
-
-@keyframes LandingPage-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.search-box {
+  padding-top: 3%;
+  a {
+    color: #a2ecff;
   }
 }
