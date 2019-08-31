@@ -51,8 +51,8 @@ class LandingPage extends React.Component {
                             </div>
                             <div className="col-sm-12">
                                 <p style={{color: 'white'}}>Sample Searches:{' '}
-                                    <a href="/scholarship?q=engineering" className="ng-star-inserted">
-                                        Engineering</a>,{' '}
+                                    <Link to="/scholarship?q=engineering" className="ng-star-inserted">
+                                        Engineering</Link>,{' '}
                                     <a href="/scholarship?q=female" className="ng-star-inserted">
                                         Female</a>,{' '}
                                     <a href="/scholarship?q=ontario" className="ng-star-inserted">
