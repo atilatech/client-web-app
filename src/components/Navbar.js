@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import './Navbar.scss';
-import atilaLogo from './assets/atila-logo-circle-transparent.png';
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -39,15 +38,14 @@ class Navbar extends React.Component {
         return (
             <nav className="Navbar container" role="navigation">
 
-                <ul className="hide-on-med-and-down">
-                    <Link id="logo-container" to={authService.isLoggedIn ? '/scholarship' : ''} className="text-white">
+                <ul className="pt-4">
+                    <Link id="logo-container" to={authService.isLoggedIn ? '/scholarship' : ''} className="nav-logo">
                         Atila
-                        <img src={atilaLogo} alt="Atila Logo" style={{ height: '100px' }}/>
                     </Link>
-                    <span className="float-right pt-4">
+                    <span className="float-right">
 
                                 <li>
-                                    <input value={searchQuery} className="browser-default" type="text" name="search"
+                                    <input value={searchQuery} className="form-control search-input" type="text" name="search"
                                            placeholder="Enter to search" onChange={this.updateSearch}/>
                                 </li>
                                 <li><Link to="search"><FontAwesomeIcon icon={faSearch}/></Link></li>

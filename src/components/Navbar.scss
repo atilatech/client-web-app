@@ -1,5 +1,20 @@
-.Navbar li {
-  display:inline;
+@import "../index";
+
+.Navbar {
   font-size: 20px;
-  padding: .5rem;
+  li {
+    display:inline;
+    padding: .5rem;
+  }
+  a {
+    //color: $primary;
+  }
+}
+.nav-logo {
+  font-family: Cambria,"Times New Roman",serif;
+  font-size: 28px;
+}
+.search-input {
+  width: 300px;
+  display: inline;
 }
