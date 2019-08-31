@@ -10,7 +10,9 @@ script:
   - CI=false ; npm run build
   - npm run deploy -- --repo "https://$github_token@github.com/client-web-app"
 deploy:
-  provider: pages
+  provider: s3
+  access_key_id: $aws_access_key_id
+  secret_access_key: $secret_access_key
+  bucket: "demo.atila.ca"
   skip_cleanup: true
-  github_token: $github_token
   local_dir: build
