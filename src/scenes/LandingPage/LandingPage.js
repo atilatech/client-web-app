@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 import './LandingPage.scss';
+import HowItWorks from "./HowItWorks";
 
 class LandingPage extends React.Component {
 
@@ -26,6 +27,7 @@ class LandingPage extends React.Component {
         const  { searchQuery } = this.state;
 
         return (
+            <React.Fragment>
             <div className="background-image">
                 <div className="preview-form container">
                     <form className="col-sm-12 p-3"
@@ -82,6 +84,8 @@ class LandingPage extends React.Component {
                     </form>
                 </div>
             </div>
+            <HowItWorks />
+            </React.Fragment>
     );
     }
 }
