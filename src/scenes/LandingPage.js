@@ -1,26 +1,76 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './LandingPage.scss';
 
-function LandingPage() {
-    return (
-        <div className="LandingPage">
-            <header className="LandingPage-header">
-                <img src={logo} className="LandingPage-logo" alt="logo" />
-                <p>
-                    Edit <code>src/LandingPage.js</code> and save to reload.
-                </p>
-                <a
-                    className="LandingPage-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
+class LandingPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            model: null
+        }
+    }
+    onSubmit = event => {
+
+    };
+
+    render () {
+
+        return (
+            <div className="background-image">
+                <div className="preview-form container">
+                    <form className="col-sm-12 p-3"
+                    onSubmit={this.onSubmit}>
+
+                        <h1 className="form-header" style={{marginBottom: 0}}>Find Your Scholarships</h1>
+                        <div className="row justify-content-center preview-questions ng-star-inserted">
+
+                        <div className="search-box">
+
+                            <div className="col-sm-12 input-field">
+                                <app-typeahead _nghost-c9="">
+                                    <label className="active" id="typeahead-label"
+                                           style={{ fontSize: '30px', caretColor: 'white', color: 'white',}}
+                                    />
+                                    <input aria-multiline="false" autoCapitalize="off"
+                                           className="form-control" id="typeahead-config" 
+                                           role="combobox" type="text" tabindex="0" placeholder="Enter a search term" 
+                                           name="searchString" 
+                                           aria-autocomplete="list" aria-expanded="false"  />
+                                </app-typeahead>
+                            </div>
+                            <div className="col-sm-12">
+                                <p style={{color: 'white'}}>Sample Searches:{' '}
+                                    <a href="/scholarship?q=engineering" className="ng-star-inserted">
+                                        Engineering</a>,{' '}
+                                    <a href="/scholarship?q=female" className="ng-star-inserted">
+                                        Female</a>,{' '}
+                                    <a href="/scholarship?q=ontario" className="ng-star-inserted">
+                                        Ontario</a>,{' '}
+                                    <a href="/scholarship?q=toronto" className="ng-star-inserted">
+                                        Toronto</a>,{' '}
+                                    <a href="/scholarship?q=black" className="ng-star-inserted">
+                                        Black</a> ,{' '}
+                                    <a href="/scholarship?q=medical%20school" className="ng-star-inserted">
+                                        Medical School</a>{' '}
+
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                        <div className="" style={{ textAlign: 'center' }}>
+                            <button className="btn btn-primary" type="submit">
+                                Get My Scholarships
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
     );
+    }
 }
 
 export default LandingPage;

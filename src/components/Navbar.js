@@ -36,13 +36,13 @@ class Navbar extends React.Component {
 
         return (
             <nav className="Navbar container" role="navigation">
-                <div className="nav-wrapper atila-blue">
-                    <ul className="right hide-on-med-and-down">
-                        <a id="logo-container" href={authService.isLoggedIn ? '/scholarship' : ''} className="brand-logo">
-                            Atila
-                            <img src={atilaLogo} alt="Atila Logo" style={{ height: '100px' }}/>
-                        </a>
-                        <span>
+
+                <ul className="hide-on-med-and-down">
+                    <a id="logo-container" href={authService.isLoggedIn ? '/scholarship' : ''} className="brand-logo">
+                        Atila
+                        <img src={atilaLogo} alt="Atila Logo" style={{ height: '100px' }}/>
+                    </a>
+                    <span className="float-right pt-4">
 
                                 <li>
                                     <input value={searchQuery} className="browser-default" type="text" name="search"
@@ -58,8 +58,7 @@ class Navbar extends React.Component {
                                 <li><a href="/essay" title="Essays">Essays</a></li>
                                 <li><a className="atila-blue" href="/team">Team</a></li>
                             </span>
-                    </ul>
-                </div>
+                </ul>
             </nav>
         )
     }
