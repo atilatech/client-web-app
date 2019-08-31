@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+
 import './LandingPage.scss';
 
 class LandingPage extends React.Component {
@@ -7,14 +9,21 @@ class LandingPage extends React.Component {
         super(props);
 
         this.state = {
-            model: null
+            model: null,
+            searchQuery: '',
         }
     }
     onSubmit = event => {
 
     };
 
+    updateSearch = event => {
+        event.preventDefault();
+        this.setState({searchQuery: event.target.value});
+    };
+
     render () {
+        const  { searchQuery } = this.state;
 
         return (
             <div className="background-image">
@@ -36,7 +45,8 @@ class LandingPage extends React.Component {
                                            className="form-control" id="typeahead-config" 
                                            role="combobox" type="text" tabindex="0" placeholder="Enter a search term" 
                                            name="searchString" 
-                                           aria-autocomplete="list" aria-expanded="false"  />
+                                           aria-autocomplete="list" aria-expanded="false"
+                                    onChange={this.updateSearch}/>
                                 </app-typeahead>
                             </div>
                             <div className="col-sm-12">
@@ -62,7 +72,10 @@ class LandingPage extends React.Component {
                     </div>
                         <div className="" style={{ textAlign: 'center' }}>
                             <button className="btn btn-primary" type="submit">
-                                Get My Scholarships
+
+                                <Link to={`/scholarship?q=${searchQuery}`} className="text-white">
+                                    Get My Scholarships
+                                </Link>
                             </button>
                         </div>
 

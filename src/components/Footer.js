@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faYoutube, faInstagram, faMedium, faLinkedin, faSnapchatGhost, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import './Footer.scss';
@@ -20,7 +22,11 @@ function Footer() {
                         <li><a  href="/blog/atila/what-is-atila">About</a></li>
                         <li><a  href="/team">Team</a></li>
                         <li><a  href="/contact">Contact</a></li>
-                        <li><a  href="/blog">Blog</a></li>
+                        <li>
+                            <Link to="blog">
+                                Blog
+                            </Link>
+                        </li>
                         <li><a  href="/forum">Forum</a></li>
                         <li><a  href="/essays">Essays</a></li>
                         <li><a  href="/profile/atilaeng">Engineering</a></li>

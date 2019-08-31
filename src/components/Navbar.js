@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -38,10 +40,10 @@ class Navbar extends React.Component {
             <nav className="Navbar container" role="navigation">
 
                 <ul className="hide-on-med-and-down">
-                    <a id="logo-container" href={authService.isLoggedIn ? '/scholarship' : ''} className="brand-logo">
+                    <Link id="logo-container" to={authService.isLoggedIn ? '/scholarship' : ''} className="text-white">
                         Atila
                         <img src={atilaLogo} alt="Atila Logo" style={{ height: '100px' }}/>
-                    </a>
+                    </Link>
                     <span className="float-right pt-4">
 
                                 <li>
@@ -53,7 +55,11 @@ class Navbar extends React.Component {
                                             <FontAwesomeIcon icon={faSearch}/>
                                     </a>
                                 </li>
-                                <li><a href="/blog" title="Blogs">Blog</a></li>
+                                <li>
+                                    <Link to="blog">
+                                        Blog
+                                    </Link>
+                                </li>
                                 <li><a href="/forum" title="Forums">Forum</a></li>
                                 <li><a href="/essay" title="Essays">Essays</a></li>
                                 <li><a className="atila-blue" href="/team">Team</a></li>
