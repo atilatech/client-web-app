@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/client-web-app/static/css/main.9828ab43.chunk.css",
+    "main.js": "/client-web-app/static/js/main.52c349f5.chunk.js",
+    "main.js.map": "/client-web-app/static/js/main.52c349f5.chunk.js.map",
+    "runtime~main.js": "/client-web-app/static/js/runtime~main.a873119c.js",
+    "runtime~main.js.map": "/client-web-app/static/js/runtime~main.a873119c.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/client-web-app/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.0d392f6f.chunk.js": "/client-web-app/static/js/2.0d392f6f.chunk.js",
+    "static/js/2.0d392f6f.chunk.js.map": "/client-web-app/static/js/2.0d392f6f.chunk.js.map",
+    "index.html": "/client-web-app/index.html",
+    "precache-manifest.492863822c66df59c12bc3e2475ad43c.js": "/client-web-app/precache-manifest.492863822c66df59c12bc3e2475ad43c.js",
+    "service-worker.js": "/client-web-app/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/client-web-app/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.9828ab43.chunk.css.map": "/client-web-app/static/css/main.9828ab43.chunk.css.map",
+    "static/media/atila-logo-circle-transparent.png": "/client-web-app/static/media/atila-logo-circle-transparent.04e1d268.png"
+  }
+}
