@@ -20,7 +20,7 @@ function HowItWorks() {
                     </div>
                     <div className="card shadow m-3 p-3 col-lg-7 col-sm-12">
 
-                        <img src={createProfileGif} id="registration-gif"
+                        <img src={registrationGif} id="registration-gif"
                              alt="Atila Registration Walkthrough" title="Atila Registration Walkthrough"
                              className="landing-page-gif landing-page-gif-desktop" />
                     </div>
@@ -32,7 +32,7 @@ function HowItWorks() {
                     </div>
                     <div className="card shadow m-3 p-3 col-lg-7 col-sm-12">
 
-                        <img src={registrationGif} id="create-profile-gif"
+                        <img src={createProfileGif} id="create-profile-gif"
                              alt="Create Your Profile" title="Create Your Profile"
                              className="landing-page-gif landing-page-gif-mobile" />
                     </div>
