@@ -15,9 +15,9 @@ describe('<Navbar />', () => {
         shallow(<Navbar />);
     });
 
-    it('renders blogLink', () => {
+    it('renders searchLink', () => {
         const wrapper = shallow(<Navbar />);
-        const searchLink = <li><Link to="search"><FontAwesomeIcon icon={faSearch}/></Link></li>;
+        const searchLink = <Link to="search" className="nav-item">Search</Link>;
         expect(wrapper.contains(searchLink)).toEqual(true);
     });
 });
