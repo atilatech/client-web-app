@@ -51,7 +51,7 @@ function Footer() {
                             {/*<!--<li name="block-fb-like">-->*/}
                             <li>
                                 {/*<!--https://stackoverflow.com/questions/20446818/facebook-like-button-responsive-width-->*/}
-                                <iframe name="f2addcfb63a04c" height="1000px" frameBorder="0" allowTransparency="true"
+                                <iframe name="f2addcfb63a04c" height="1000px" frameBorder="0" allowtransparency="true"
                                         allowFullScreen={true} scrolling="no" title="fb:like Facebook Social Plugin"
                                         src=""
                                         style={{border: 'none', visibility: 'visible', width: '100%', height: '100px'}}
@@ -62,7 +62,7 @@ function Footer() {
                                 <a href="https://twitter.com/atilatech?ref_src=twsrc%5Etfw" className="twitter-follow-button" target="_blank" rel="noopener">
                                     Follow @atilatech <FontAwesomeIcon icon={faInstagram} />
                                 </a>
-                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
+                                <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8" />
                             </li> <br />
                             <li>Built By
                                 <a href="https://tech.atila.ca" target="_blank" style={{color: '#50eafd !important'}}>Atila Tech</a>

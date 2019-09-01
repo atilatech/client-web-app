@@ -16,7 +16,6 @@ class Blog extends React.Component {
                 <h1>
                     Blog
                 </h1>
-                <hr />
             </div>
     );
     }

@@ -1,13 +1,13 @@
 @import "../index";
 
 .Navbar {
-  font-size: 20px;
+  font-size: 17px;
   li {
     display:inline;
     padding: .5rem;
   }
   a {
-    //color: $primary;
+    color: $primary;
   }
 }
 .nav-logo {
@@ -17,4 +17,8 @@
 .search-input {
   width: 300px;
   display: inline;
+}
+
+.nav-item {
+  padding: 0.5rem;
 }

@@ -16,7 +16,6 @@ class Scholarship extends React.Component {
                 <h1>
                 Scholarship
                 </h1>
-                <hr />
             </div>
         );
     }

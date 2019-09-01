@@ -45,7 +45,7 @@ class LandingPage extends React.Component {
                                 />
                                 <input aria-multiline="false" autoCapitalize="off"
                                        className="form-control" id="typeahead-config"
-                                       role="combobox" type="text" tabindex="0" placeholder="Enter a search term"
+                                       role="combobox" type="text" tabIndex="0" placeholder="Enter a search term"
                                        name="searchString"
                                        aria-autocomplete="list" aria-expanded="false"
                                        onChange={this.updateSearch}/>
