@@ -5,13 +5,14 @@ python:
   - "3.5"
 cache:
   directories:
-#  - node_modules
+  - node_modules
   - pip
 install:
   # Install any dependencies required for building your site here.
   # `awscli` is required for invalidation of CloudFront distributions.
   - pip install --user awscli
 script:
+  - npm install
   - npm test
   - CI=false ; npm run build
 deploy:
