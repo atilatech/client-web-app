@@ -3,6 +3,7 @@
 .background-image {
   //background: linear-gradient(to left, #00c6ff, #30a0ff);
   background: linear-gradient(to left, #1976d2, #194f87);
+  height: 450px;
 
 }
 
@@ -19,7 +20,9 @@
 }
 .search-box {
   padding-top: 3%;
+  font-size: 25px;
   a {
     color: #a2ecff;
+    font-size: 25px;
   }
 }

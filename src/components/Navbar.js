@@ -1,4 +1,9 @@
 import React from 'react';
+import NavbarBootstrap from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+
 import {Link} from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -36,28 +41,30 @@ class Navbar extends React.Component {
         const {searchQuery, authService} = this.state;
 
         return (
-            <nav className="Navbar container" role="navigation">
-
-                <ul className="pt-4">
-                    <Link id="logo-container" to={authService.isLoggedIn ? '/scholarship' : ''} className="nav-logo">
-                        Atila
-                    </Link>
-                    <span className="float-right">
-
-                                <li>
-                                    <input value={searchQuery} className="form-control search-input" type="text" name="search"
-                                           placeholder="Enter to search" onChange={this.updateSearch}/>
-                                </li>
-                                <li><Link to="search"><FontAwesomeIcon icon={faSearch}/></Link></li>
-                                <li><Link to="blog">Blog</Link>
-                                </li>
-                                <li><a href="/forum" title="Forums">Forum</a></li>
-                                <li><a href="/essay" title="Essays">Essays</a></li>
-                                <li><Link to="team">Team</Link></li>
-                            </span>
-                </ul>
-            </nav>
-        )
+            <NavbarBootstrap bg="light" expand="md" className="px-5">
+                <NavbarBootstrap.Brand className="nav-logo"><Link to="/">Atila</Link></NavbarBootstrap.Brand>
+                <NavbarBootstrap.Toggle aria-controls="basic-navbar-nav" />
+                <NavbarBootstrap.Collapse id="basic-navbar-nav">
+                    <Nav className="ml-auto">
+                        <Nav.Link><Link to="/blog">Blog</Link></Nav.Link>
+                        <Nav.Link><Link to="/essay">Essay</Link></Nav.Link>
+                        <Nav.Link><Link to="/scholarship">Scholarships</Link></Nav.Link>
+                        {authService.isLoggedIn &&
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        </NavDropdown>}
+                    </Nav>
+                    <Form inline>
+                        <input value={searchQuery} className="form-control search-input" type="text" name="search"
+                               placeholder="Enter a search term" onChange={this.updateSearch}/>
+                        <Link to="search" className="ml-3"><FontAwesomeIcon icon={faSearch}/></Link>
+                    </Form>
+                </NavbarBootstrap.Collapse>
+            </NavbarBootstrap>);
     }
 }
 
