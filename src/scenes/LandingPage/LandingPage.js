@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 
 import './LandingPage.scss';
 import HowItWorks from "./HowItWorks";
+import MoreFeatures from "./MoreFeatures";
 
 class LandingPage extends React.Component {
 
@@ -83,6 +84,8 @@ class LandingPage extends React.Component {
                     </form>
             </div>
             <HowItWorks />
+            <hr/>
+            <MoreFeatures />
             </React.Fragment>
     );
     }
