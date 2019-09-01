@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarBootstrap from 'react-bootstrap/Navbar';
+import {Navbar as NavbarBootstrap} from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
