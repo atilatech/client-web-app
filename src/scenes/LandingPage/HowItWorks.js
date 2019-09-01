@@ -10,8 +10,8 @@ function HowItWorks() {
         <div className="container">
             <h1 className="col-sm-12 text-center">
                 <Link to="/blog/atila/what-is-atila"> How Atila Works </Link></h1>
-            <h5 className="col-sm-12 text-center"> 
-                <Link to="register">Make an account.</Link> Find Scholarships. Apply </h5>
+            <h2 className="col-sm-12 text-center">
+                <Link to="register">Make an account.</Link> Find Scholarships. Apply </h2>
             <div className="offset-lg-1">
                 <div className="row">
                     <div className="card shadow m-3 p-5 col-lg-4 col-sm-12">

@@ -11,14 +11,14 @@ function Footer() {
             <div className="Footer container p-3">
                 <div className="row">
                     <div className="col lg-6 sm-12">
-                        <a href="/blog/atila/what-is-atila" className="white-text" style={{textDecoration: 'underline'}}><h5 >What is Atila?</h5></a>
+                        <a href="/blog/atila/what-is-atila" className="white-text" style={{textDecoration: 'underline'}}><h2 >What is Atila?</h2></a>
                         <p className="grey-text text-lighten-4">Atila aims to improve access to education by automating the scholarship application process.
                             <a href="/blog/atila/what-is-atila">Automatically find and apply</a> to scholarships at the click of a button.
                         </p>
 
                     </div>
                     <div className="col lg-3 sm-12">
-                        <h5 >Explore</h5>
+                        <h2 >Explore</h2>
                         <ul>
                             <li><a  href="/blog/atila/what-is-atila">About</a></li>
                             <li><a  href="/team">Team</a></li>
@@ -37,7 +37,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div className="col lg-3 sm-12">
-                        <h5 >Connect</h5>
+                        <h2 >Connect</h2>
                         <ul id="connect-links">
                             <li><a  target="_blank" rel="noopener" href="https://www.facebook.com/atilatech1/"><FontAwesomeIcon icon={faFacebook} /></a></li>
                             <li><a  target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCG2iWiYgJYkjBl4EdYGI5mw/"><FontAwesomeIcon icon={faYoutube} /></a></li>

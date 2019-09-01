@@ -10,9 +10,9 @@ function LandingPageContent({ title, description, contentList }) {
         <div className="p-5">
             <h1 className="col-sm-12 text-center">
                 <Link to={`/${title.toLowerCase()}`}> {title} </Link></h1>
-            <h5 className="col-sm-12 text-center">
+            <h2 className="col-sm-12 text-center">
                 {description}
-            </h5>
+            </h2>
             <div className="row">
                 {contentList.map( content => (<ContentCard className="max-width-md-30 m-2"  content={content}/>))}
             </div>

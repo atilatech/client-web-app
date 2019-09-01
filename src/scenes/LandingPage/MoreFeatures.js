@@ -11,9 +11,9 @@ function MoreFeatures() {
             <h1 className="col-sm-12 text-center">
                 <Link to="/blog/atila/what-is-atila"> More Features </Link>
             </h1>
-            <h5  className="col-sm-12 text-center">
+            <h2  className="col-sm-12 text-center">
                 Stay Woke. <Link to="essay">
-                Read Essays. </Link> <Link to="applications/demo">Automate Applications.</Link></h5>
+                Read Essays. </Link> <Link to="applications/demo">Automate Applications.</Link></h2>
 
             <div className="offset-lg-1">
                 <div  className="row">
