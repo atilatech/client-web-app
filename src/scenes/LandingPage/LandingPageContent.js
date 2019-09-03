@@ -13,8 +13,10 @@ function LandingPageContent({ title, description, contentList }) {
             <h2 className="col-sm-12 text-center">
                 {description}
             </h2>
-            <div className="row">
-                {contentList.map( content => (<ContentCard className="max-width-md-30 m-2"  content={content}/>))}
+            <div className="row ml-md-4">
+                {contentList.map( content => (<ContentCard className="max-width-md-30 m-2"
+                                                           key={content.title}
+                                                           content={content}/>))}
             </div>
         </div>
     );
@@ -23,7 +25,7 @@ function LandingPageContent({ title, description, contentList }) {
 
 LandingPageContent.propTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.shape({}).isRequired,
+    description: PropTypes.string.isRequired,
     contentList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 

@@ -6,8 +6,9 @@ import HowItWorks from "./HowItWorks";
 import MoreFeatures from "./MoreFeatures";
 import LandingPageContent from "./LandingPageContent";
 import LandingPageLiveDemo from "./LandingPageLiveDemo";
+import {genericItemTransform} from "../../services/utils";
 
-const blogs = [
+let blogs = [
     {
         'title': 'How to Get a Summer Internship',
         'user': {
@@ -77,7 +78,7 @@ const blogs = [
         'contributors': []
     },
 ];
-const essays = [
+let essays = [
         {
             'title': 'Ivey AEO2 Activity Report 2017',
             'user': {
@@ -157,6 +158,10 @@ const essays = [
             'contributors': []
         }
     ];
+
+blogs = blogs.map(content => genericItemTransform(content));
+essays = essays.map(content => genericItemTransform(content));
+
 class LandingPage extends React.Component {
 
     constructor(props) {

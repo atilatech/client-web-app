@@ -4,33 +4,71 @@ import {Link} from "react-router-dom";
 
 import './Footer.scss';
 
-function ContentCard({ className, content }) {
+class ContentCard extends React.Component {
 
-    const { title, description, image, slug } = content;
+    constructor(props) {
+        super(props);
 
-    return (
-        <div className={`${className} card shadow`}>
-                <div  className="card-title card-header">
+        this.state = {
+            showPreview: false,
+        }
+    }
+
+    togglePreview = (event) => {
+        event.preventDefault();
+
+        const { showPreview } = this.state;
+        this.setState({ showPreview: !showPreview });
+
+    };
+
+
+
+    render() {
+
+        const { className, content } = this.props;
+        const { showPreview } = this.state;
+        const { title, description, image, slug, type, user } = content;
+
+        let descriptionText = showPreview ? description : `${description.substring(0,100)}`;
+        if (!showPreview && description.length > 100) {
+            descriptionText +='...'
+        }
+        return (
+            <div className={`${className} card shadow p-3`}>
+                <div  className="card-title">
                     <Link  title="How to Get a Summer Internship" to={slug}>
                         {title}
-                </Link><p  className="card-subtitle text-muted ng-star-inserted" style={{ fontSize: 'small' }}>
-                    Blog
-                </p>
-                </div><div  className="chip m-3 ng-star-inserted" style={{ width: '200px' }}>
-                <img  style={{ maxWidth: '50px' }} src="https://firebasestorage.googleapis.com/v0/b/atila-7.appspot.com/o/user-profiles%2F629%2Fprofile-pictures%2Ftrevor-sookraj.jpg?alt=media&amp;token=ebf88b32-8a18-4bd5-83e6-d33fcf112a9d" />
-                    <Link to="/profile/trevorsookraj" >
-                        Trevor Sookraj
                     </Link>
+                    <br />
+                    <p  className="badge badge-secondary"
+                        style={{ fontSize: 'small' }}>
+                        {type}
+                    </p>
+                </div>
+                <div className="bg-light mb-3 p-1">
+                    <Link to={`/profile/${user.username}`} >
+                    <img
+                        alt="user profile"
+                        style={{ height: '50px', maxWidth: 'auto' }}
+                        className="rounded-circle py-1 pr-1"
+                        src={user.profile_pic_url} />
+                        {user.first_name} {user.last_name}
+                    </Link>
+                </div>
+                <div  className="card-image ng-star-inserted mb-3">
+                    <Link to={slug}>
+                        <img  src={image}
+                              alt={title}
+                              style={{ width: '100%'}}
+                        />
+                    </Link>
+                </div>
+                { descriptionText }
+                <a href="" onClick={this.togglePreview} >  Preview</a>
             </div>
-            <div  className="card-image ng-star-inserted">
-                <Link to="/blog/trevorsookraj/how-to-get-a-summer-internship">
-                    <img  src={image} />
-                </Link>
-            </div>
-            { description }
-                <a  className="card-footer">  Preview</a>
-        </div>
-    );
+        );
+    }
 }
 
 ContentCard.defaultProps = {
