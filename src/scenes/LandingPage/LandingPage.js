@@ -203,26 +203,25 @@ class LandingPage extends React.Component {
                                 />
                                 <input aria-multiline="false" autoCapitalize="off"
                                        className="form-control" id="typeahead-config"
-                                       role="combobox" type="text" tabIndex="0" placeholder="Enter a search term"
+                                       type="text" tabIndex="0" placeholder="Enter a search term"
                                        name="searchString"
                                        aria-autocomplete="list" aria-expanded="false"
                                        onChange={this.updateSearch}/>
                             </div>
                             <div className="col-sm-12 pt-3">
                                 <p style={{color: 'white'}}>Sample Searches:{' '}
-                                    <Link to="/scholarship?q=engineering" className="ng-star-inserted">
+                                    <Link to="/scholarship?q=engineering">
                                         Engineering</Link>,{' '}
-                                    <a href="/scholarship?q=female" className="ng-star-inserted">
-                                        Female</a>,{' '}
-                                    <a href="/scholarship?q=ontario" className="ng-star-inserted">
-                                        Ontario</a>,{' '}
-                                    <a href="/scholarship?q=toronto" className="ng-star-inserted">
-                                        Toronto</a>,{' '}
-                                    <a href="/scholarship?q=black" className="ng-star-inserted">
-                                        Black</a> ,{' '}
-                                    <a href="/scholarship?q=medical%20school" className="ng-star-inserted">
-                                        Medical School</a>{' '}
-
+                                   <Link to="/scholarship?q=female">
+                                        Female</Link>,{' '}
+                                   <Link to="/scholarship?q=ontario">
+                                        Ontario</Link>,{' '}
+                                   <Link to="/scholarship?q=toronto">
+                                        Toronto</Link>,{' '}
+                                   <Link to="/scholarship?q=black">
+                                        Black</Link> ,{' '}
+                                   <Link to="/scholarship?q=medical%20school">
+                                        Medical School</Link>{' '}
                                 </p>
                             </div>
 
