@@ -99,3 +99,7 @@ export function toTitleCase(str) {
 
     return str;
 }
+
+export function formatCurrency(input) {
+    return input.toLocaleString('en-ca', {style : 'currency', currency: 'CAD'});
+}
