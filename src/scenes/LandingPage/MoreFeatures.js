@@ -18,7 +18,11 @@ function MoreFeatures() {
             <div className="offset-lg-1">
                 <div  className="row">
                     <div  className="card shadow m-3 p-5 col-lg-4 col-sm-12">
-                        <h3 >1. Get Notified when Scholarships are Due 🕐</h3>
+                        <h3 >1. Get Notified when Scholarships are Due
+                            <span role="img" aria-label="clock emoji">
+                                🕐
+                            </span>
+                        </h3>
                         <p >Save scholarships you are interested in and we'll let you know 7 days and 24 hours before the scholarship is due.</p>
                     </div>
                     <div  className="card shadow m-3 p-3 col-lg-7 col-sm-12">
@@ -28,7 +32,11 @@ function MoreFeatures() {
                 </div>
                 <div  className="row">
                     <div  className="card shadow m-3 p-5 col-lg-4 col-sm-12">
-                        <h3 >2. Read Other student's <Link to="essay">Essays</Link> 👫</h3>
+                        <h3 >2. Read Other student's <Link to="essay">Essays</Link>
+                            <span role="img" aria-label="people holding hands emoji">
+                                👫
+                            </span>
+                        </h3>
                         <p >Read <Link to="essay">essays and past applications</Link> from other students for scholarships and schools you are interested in.</p>
                     </div>
                     <div  className="card shadow m-3 p-3 col-lg-7 col-sm-12">
@@ -38,8 +46,13 @@ function MoreFeatures() {
                 </div>
                 <div  className="row">
                     <div  className="card shadow m-3 p-5 col-lg-4 col-sm-12">
-                        <h3 >3. <Link to="applications/demo">Automate</Link> Scholarship Application 💪🏿</h3>
-                        <p >Automate the form filling process for web and pdf scholarship applications. Atila will even write your application email for you. 😯</p>
+                        <h3 >3. <Link to="applications/demo">Automate</Link> Scholarship Application
+                            <span role="img" aria-label="flexed bicep emoji">
+                            💪🏿
+                            </span></h3>
+                        <p >Automate the form filling process for web and pdf scholarship applications. Atila will even write your application email for you.
+                            <span role="img" aria-label="surprised face emoji">😯</span>
+                        </p>
                     </div>
                     <div  className="card shadow m-3 p-3 col-lg-7 col-sm-12">
 

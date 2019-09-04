@@ -201,11 +201,10 @@ class LandingPage extends React.Component {
                                 <label className="active" id="typeahead-label"
                                        style={{ fontSize: '30px', caretColor: 'white', color: 'white',}}
                                 />
-                                <input aria-multiline="false" autoCapitalize="off"
+                                <input
                                        className="form-control" id="typeahead-config"
                                        type="text" tabIndex="0" placeholder="Enter a search term"
                                        name="searchString"
-                                       aria-autocomplete="list" aria-expanded="false"
                                        onChange={this.updateSearch}/>
                             </div>
                             <div className="col-sm-12 pt-3">
