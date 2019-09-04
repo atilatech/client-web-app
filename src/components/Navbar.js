@@ -1,11 +1,12 @@
 import React from 'react';
+import * as NavbarBootstrap from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+
 import {Link} from "react-router-dom";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
 import './Navbar.scss';
-import atilaLogo from './assets/atila-logo-circle-transparent.png';
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -37,29 +38,34 @@ class Navbar extends React.Component {
         const {searchQuery, authService} = this.state;
 
         return (
-            <nav className="Navbar container" role="navigation">
-
-                <ul className="hide-on-med-and-down">
-                    <Link id="logo-container" to={authService.isLoggedIn ? '/scholarship' : ''} className="text-white">
-                        Atila
-                        <img src={atilaLogo} alt="Atila Logo" style={{ height: '100px' }}/>
-                    </Link>
-                    <span className="float-right pt-4">
-
-                                <li>
-                                    <input value={searchQuery} className="browser-default" type="text" name="search"
-                                           placeholder="Enter to search" onChange={this.updateSearch}/>
-                                </li>
-                                <li><Link to="search"><FontAwesomeIcon icon={faSearch}/></Link></li>
-                                <li><Link to="blog">Blog</Link>
-                                </li>
-                                <li><a href="/forum" title="Forums">Forum</a></li>
-                                <li><a href="/essay" title="Essays">Essays</a></li>
-                                <li><Link to="team">Team</Link></li>
-                            </span>
-                </ul>
-            </nav>
-        )
+            <React.Fragment>
+                <NavbarBootstrap bg="white" expand="md" className="Navbar px-5">
+                <NavbarBootstrap.Brand className="nav-logo"><Link to="/">Atila</Link></NavbarBootstrap.Brand>
+                <NavbarBootstrap.Toggle aria-controls="basic-navbar-nav" />
+                <NavbarBootstrap.Collapse id="basic-navbar-nav">
+                    <Nav className="ml-auto">
+                        <Form inline>
+                            <input value={searchQuery} className="form-control search-input" type="text" name="search"
+                                   placeholder="Enter a search term" onChange={this.updateSearch}/>
+                            <Link to="search" className="nav-item">Search</Link>
+                        </Form>
+                        <Link to="/essay" className="nav-item">Essays</Link>
+                        <Link to="/blog" className="nav-item">Blogs</Link>
+                        <Link to="/scholarship" className="nav-item">Login</Link>
+                        {authService.isLoggedIn &&
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        </NavDropdown>}
+                    </Nav>
+                </NavbarBootstrap.Collapse>
+            </NavbarBootstrap>
+                <hr style={{ margin: 0 }}/>
+            </React.Fragment>
+        );
     }
 }
 

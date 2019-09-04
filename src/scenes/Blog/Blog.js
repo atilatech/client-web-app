@@ -1,5 +1,5 @@
 import React from 'react';
-class Scholarship extends React.Component {
+class Blog extends React.Component {
 
     constructor(props) {
         super(props);
@@ -14,12 +14,11 @@ class Scholarship extends React.Component {
         return (
             <div>
                 <h1>
-                Scholarship
+                    Blog
                 </h1>
-                <hr />
             </div>
-        );
+    );
     }
 }
 
-export default Scholarship;
+export default Blog;

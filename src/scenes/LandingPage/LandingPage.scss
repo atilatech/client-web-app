@@ -1,8 +1,9 @@
-@import '../index.scss';
+@import '../../index';
 
 .background-image {
   //background: linear-gradient(to left, #00c6ff, #30a0ff);
   background: linear-gradient(to left, #1976d2, #194f87);
+  min-height: 450px;
 
 }
 
@@ -19,7 +20,26 @@
 }
 .search-box {
   padding-top: 3%;
+  font-size: 25px;
   a {
     color: #a2ecff;
+    font-size: 25px;
   }
+}
+.videowrapper {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  min-height: 500px;
+}
+
+.videowrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
