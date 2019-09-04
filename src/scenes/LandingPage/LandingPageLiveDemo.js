@@ -8,7 +8,9 @@ function LandingPageLiveDemo() {
                 Live Demo
             </h1>
             <div className="videowrapper">
-                <iframe src="//www.youtube.com/embed/c_K4342WMwQ?cc_load_policy=1" width="560" height="314">
+                <iframe title="Atila Live demo Video"
+                        src="//www.youtube.com/embed/c_K4342WMwQ?cc_load_policy=1"
+                        width="560" height="314">
                 </iframe>
             </div>
         </div>
