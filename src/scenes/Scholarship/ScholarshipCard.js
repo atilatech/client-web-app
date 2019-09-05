@@ -57,7 +57,9 @@ class ContentCard extends React.Component {
                                 </small>
                             </p>
                             <p className="card-text">{descriptionText}</p>
-                            <a href="" onClick={this.togglePreview} >  Show More</a>
+                            <button className="btn btn-link" onClick={this.togglePreview} >
+                                Show More
+                            </button>
                         </div>
                     </div>
                 </div>

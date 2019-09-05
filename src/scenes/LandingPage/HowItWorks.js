@@ -15,7 +15,11 @@ function HowItWorks() {
             <div className="offset-lg-1">
                 <div className="row">
                     <div className="card shadow m-3 p-5 col-lg-4 col-sm-12">
-                        <h3>1. Make an Account 👆🏽</h3>
+                        <h3>1. Make an Account
+                            <span role="img" aria-label="finger pointing upwards emoji">
+                                👆🏽
+                            </span>
+                        </h3>
                         <p><Link to="register">Register</Link> for a free account in 15 seconds.</p>
                     </div>
                     <div className="card shadow m-3 p-3 col-lg-7 col-sm-12">
@@ -27,7 +31,11 @@ function HowItWorks() {
                 </div>
                 <div className="row">
                     <div className="card shadow m-3 p-5 col-lg-4 col-sm-12">
-                        <h3>2. Create Your Profile 🙎🏾‍♀️</h3>
+                        <h3>2. Create Your Profile
+                            <span role="img" aria-label="female emoji">
+                            🙎🏾‍♀️
+                            </span>
+                            </h3>
                         <p>Tell us the schools and programs you are interested in.</p>
                     </div>
                     <div className="card shadow m-3 p-3 col-lg-7 col-sm-12">
@@ -39,7 +47,11 @@ function HowItWorks() {
                 </div>
                 <div className="row">
                     <div className="card shadow m-3 p-5 col-lg-4 col-sm-12">
-                        <h3>3. Find Your Scholarships 👀</h3>
+                        <h3>3. Find Your Scholarships
+                            <span role="img" aria-label="eyes emoji">
+                            👀
+                            </span>
+                            </h3>
                         <p>Get matched with scholarships that are customized just for you based on your profile.</p>
                     </div>
                     <div className="card shadow m-3 p-3 col-lg-7 col-sm-12">
