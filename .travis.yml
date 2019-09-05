@@ -14,7 +14,7 @@ install:
 script:
   - npm install
   - npm test
-  - CI=false ; npm run build
+  - npm run build
 deploy:
   provider: s3
   access_key_id: $aws_access_key_id
