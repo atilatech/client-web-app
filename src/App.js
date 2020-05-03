@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Blog from "./scenes/Blog/Blog";
 import ScholarshipsList from "./scenes/Scholarship/ScholarshipsList/ScholarshipsList";
+import Team from "./components/Team/Team";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/" component={LandingPage} />
             <Route path="/blog" component={Blog} />
             <Route path="/scholarship" component={ScholarshipsList} />
+            <Route path="/team" component={Team} />
             <Footer />
         </div>
       </Router>

@@ -51,6 +51,7 @@ class Navbar extends React.Component {
                         </Form>
                         <Link to="/essay" className="nav-item">Essays</Link>
                         <Link to="/blog" className="nav-item">Blogs</Link>
+                        <Link to="/team" className="nav-item">Team</Link>
                         <Link to="/scholarship" className="nav-item">Login</Link>
                         {authService.isLoggedIn &&
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
