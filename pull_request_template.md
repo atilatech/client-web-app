@@ -14,4 +14,4 @@
 ## Demo (Before)
 
 
-More information on how to write a good PR here: https://docs.google.com/document/d/1OJ8XKPVsVKLu_nK-EcHDzIZf_Y-QsvHeRTImT407cQI/edit#heading=h.xh8qi9amga0p
+More information on how to write a good PR here: https://atila.ca/blog/tomiwa/how-we-write-frontend-react-code-and-create-pull-requests-at-atila#during-the-pull-request
