@@ -1,5 +1,5 @@
 import React from 'react';
-import * as NavbarBootstrap from 'react-bootstrap/Navbar';
+import NavbarBootstrap from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
@@ -52,6 +52,7 @@ class Navbar extends React.Component {
                         <Link to="/essay" className="nav-item">Essays</Link>
                         <Link to="/blog" className="nav-item">Blogs</Link>
                         <Link to="/team" className="nav-item">Team</Link>
+                        <Link to="/practice" className="nav-item">Practice</Link>
                         <Link to="/scholarship" className="nav-item">Login</Link>
                         {authService.isLoggedIn &&
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">

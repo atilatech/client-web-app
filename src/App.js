@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Blog from "./scenes/Blog/Blog";
 import ScholarshipsList from "./scenes/Scholarship/ScholarshipsList/ScholarshipsList";
 import Team from "./components/Team/Team";
+import Practice from './scenes/Practice/Practice';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/blog" component={Blog} />
             <Route path="/scholarship" component={ScholarshipsList} />
             <Route path="/team" component={Team} />
+            <Route path="/practice" component={Practice} />
             <Footer />
         </div>
       </Router>
