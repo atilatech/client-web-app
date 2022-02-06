@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faYoutube, faInstagram, faMedium, faLinkedin, faSnapchatGhost, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube, faInstagram, faLinkedin, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import './Footer.scss';
 
 function Footer() {
@@ -11,9 +11,9 @@ function Footer() {
             <div className="Footer container p-3">
                 <div className="row">
                     <div className="col lg-6 sm-12">
-                        <Link to="/blog/atila/what-is-atila" className="white-text" style={{textDecoration: 'underline'}}><h2 >What is Atila?</h2></Link>
-                        <p className="grey-text text-lighten-4">Atila aims to improve access to education by automating the scholarship application process.
-                            <Link to="/blog/atila/what-is-atila">Automatically find and apply</Link> to scholarships at the click of a button.
+                    
+                        <a href="https://atila.ca" target="_blank" style={{textDecoration: 'underline'}} rel="noreferrer" ><h2 >What is Atila?</h2></a>
+                        <p className="grey-text text-lighten-4">Atila is a plattform for starting and getting scholarships using fiat or cryptocurrencies.
                         </p>
 
                     </div>
@@ -40,9 +40,10 @@ function Footer() {
                         <h2 >Connect</h2>
                         <ul className="connect-links list-style-type-none">
                             <span className="connect-links-icons">
+                                
                                 <li>
-                                    <a  target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/atilatech1/">
-                                        <FontAwesomeIcon icon={faFacebook} />
+                                    <a  target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@atila.tech">
+                                    <FontAwesomeIcon icon={faTiktok} />
                                     </a>
                                 </li>
                                 <li>
@@ -63,16 +64,6 @@ function Footer() {
                                 <li>
                                     <a  target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/atila-tech/">
                                         <FontAwesomeIcon icon={faLinkedin} />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a  target="_blank" rel="noopener noreferrer" href="https://medium.com/atila-tech">
-                                        <FontAwesomeIcon icon={faMedium} />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a  target="_blank" rel="noopener noreferrer" href="http://snapchat.com/add/atilatech">
-                                        <FontAwesomeIcon icon={faSnapchatGhost} />
                                     </a>
                                 </li>
                             </span>
