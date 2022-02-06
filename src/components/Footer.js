@@ -86,7 +86,7 @@ function Footer() {
                                 <li>Built with <span role="img" aria-label="clock emoji">
                                 ❤️
                             </span> By {' '}
-                                    <Link to="https://tech.atila.ca" target="_blank" style={{color: '#50eafd !important'}}>Atila Tech</Link>
+                                    <a href="https://atila.ca" target="_blank" style={{color: '#50eafd !important'}} rel="noreferrer" >Atila</a>
                                 </li>
                             </div>
                         </ul>
