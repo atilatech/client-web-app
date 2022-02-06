@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0"
   }

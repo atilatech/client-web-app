@@ -1,12 +1,11 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-
 import './LandingPage.scss';
 import HowItWorks from "./HowItWorks";
 import MoreFeatures from "./MoreFeatures";
 import LandingPageContent from "./LandingPageContent";
 import LandingPageLiveDemo from "./LandingPageLiveDemo";
 import {genericItemTransform} from "../../services/utils";
+import Banner from './Banner';
 
 let blogs = [
     {
@@ -163,81 +162,12 @@ blogs = blogs.map(content => genericItemTransform(content));
 essays = essays.map(content => genericItemTransform(content));
 
 class LandingPage extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            model: null,
-            searchQuery: '',
-        }
-    }
-    onSubmit = event => {
-
-    };
-
-    updateSearch = event => {
-        event.preventDefault();
-        this.setState({searchQuery: event.target.value});
-    };
-
     render () {
-        const  { searchQuery } = this.state;
 
         return (
             <React.Fragment>
-            <div className="background-image pt-5 pb-3">
-
-                        <h1 className="form-header" style={{marginBottom: 0}}>Easily Find and Apply to Scholarships</h1>
-
-
-                <form className="col-sm-12 p-3 search-box"
-                      onSubmit={this.onSubmit}>
-                    <div className="row justify-content-center preview-questions ng-star-inserted">
-
-                        <div className="search-box">
-
-                            <div className="col-sm-12 input-field">
-                                <label className="active" id="typeahead-label"
-                                       style={{ fontSize: '30px', caretColor: 'white', color: 'white',}}
-                                />
-                                <input
-                                       className="form-control" id="typeahead-config"
-                                       type="text" tabIndex="0" placeholder="Enter a search term"
-                                       name="searchString"
-                                       onChange={this.updateSearch}/>
-                            </div>
-                            <div className="col-sm-12 pt-3">
-                                <p style={{color: 'white'}}>Sample Searches:{' '}
-                                    <Link to="/scholarship?q=engineering">
-                                        Engineering</Link>,{' '}
-                                   <Link to="/scholarship?q=female">
-                                        Female</Link>,{' '}
-                                   <Link to="/scholarship?q=ontario">
-                                        Ontario</Link>,{' '}
-                                   <Link to="/scholarship?q=toronto">
-                                        Toronto</Link>,{' '}
-                                   <Link to="/scholarship?q=black">
-                                        Black</Link> ,{' '}
-                                   <Link to="/scholarship?q=medical%20school">
-                                        Medical School</Link>{' '}
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                        <div className="" style={{ textAlign: 'center' }}>
-                            <button className="btn btn-primary" type="submit">
-
-                                <Link to={`/scholarship?q=${searchQuery}`} className="text-white">
-                                    Get My Scholarships
-                                </Link>
-                            </button>
-                        </div>
-
-                    </form>
-            </div>
+            <Banner />
+            <hr/>
             <HowItWorks />
             <hr/>
             <MoreFeatures />

@@ -103,3 +103,19 @@ export function toTitleCase(str) {
 export function formatCurrency(input) {
     return input.toLocaleString('en-ca', {style : 'currency', currency: 'CAD'});
 }
+
+export function slugify(text, maxLength=null) {
+
+    if (maxLength) {
+        text = text.substring(0,maxLength);
+    }
+    return text
+        .trim()
+        .toLowerCase()
+        .replace(/[^\w /-]+/g, '')
+        .trim()
+        .replace(/ +/g, '-')
+        .replace(/\//g, '-')
+        .replace(/-{2,}/g, '-')
+        ;
+}
