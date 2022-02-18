@@ -23,7 +23,7 @@ jobs:
           node-version: 14.17.6
       # Run npm install and build on our code
       - run: npm install
-      - run: npm run build --if-present
+      - run: npm run build
       # Deploy to Netlify using our dev secrets
       - name: Deploy to netlify
         uses: netlify/actions/cli@master
