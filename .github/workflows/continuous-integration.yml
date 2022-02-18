@@ -14,7 +14,9 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm rebuild
+      # https://github.com/karma-runner/karma-chrome-launcher/issues/154#issuecomment-334526843
+      # NPM rebuild is needed when deploying to CI because it recompiles the C++ addons for Node JS
+        run: npm run build
 
       - name: Test
         run: npm run test
