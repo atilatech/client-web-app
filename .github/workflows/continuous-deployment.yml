@@ -1,32 +1,35 @@
-name: 'Netlify Previews'
+# Name of workflow
+name: Development workflow
 
+# When workflow is triggered
 on:
   - push
 
+# Jobs to carry out
 jobs:
   deploy:
-    name: 'Deploy'
+    # Operating system to run job on
     runs-on: ubuntu-latest
 
+    # Steps in job
     steps:
-      - uses: actions/checkout@v1
-
-      # Sets the branch name as environment variable
-      - uses: nelonoel/branch-name@v1.0.1
-
-      - name: Deploy Staging
-        # if: github.ref != 'refs/heads/master' # TPDP jave a separate staging and master deploy
-        uses: jsmrcaga/action-netlify-deploy@master
+      # Get code from repo
+      - name: Checkout code
+        uses: actions/checkout@v1
+      # Install NodeJS
+      - name: Use Node.js 14.17.6
+        uses: actions/setup-node@v1
         with:
+          node-version: 14.17.6
+      # Run npm install and build on our code
+      - run: npm install
+      - run: npm run build --if-present
+      # Deploy to Netlify using our dev secrets
+      - name: Deploy to netlify
+        uses: netlify/actions/cli@master
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          deploy_alias: ${{ env.BRANCH_NAME }}
-      
-      # Creates a status check with link to preview
-      - name: Status check
-        uses: Sibz/github-status-action@v1.1.1
         with:
-          authToken: ${{ secrets.GITHUB_TOKEN }}
-          context: Netlify preview
-          state: success
-          target_url: https://${{ env.BRANCH_NAME }}--open-atila.netlify.app
+          args: deploy --dir=build --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]
